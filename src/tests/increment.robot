@@ -14,3 +14,10 @@ When button pressed twice the counter is two
     Click Button  Paina
     Click Button  Paina
     Page Should Contain  nappia painettu 2 kertaa
+
+Counter is zero after any number presses and reseting
+    Go To  ${HOME_URL}
+    Click Button  Paina
+    Click Button  Paina
+    Click Button  Nollaa
+    Page Should Contain  nappia painettu 0 kertaa
