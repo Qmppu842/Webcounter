@@ -24,3 +24,7 @@ Open And Configure Browser
         Set Selenium Speed  ${DELAY}
     END
     Open Browser  browser=${BROWSER}  options=${options}
+
+Set value to zero
+    Input Text  arvo  0
+    Click Button  aseta

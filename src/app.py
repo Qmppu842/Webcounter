@@ -21,7 +21,11 @@ def reset():
     cnt.reset()
     return redirect("/")
 
+
 @app.route("/set-value", methods=["POST"])
 def set_value():
-    cnt.value =request.form["arvo"]
+    arvo = int(request.form["arvo"])
+    if not isinstance(arvo, int):
+        arvo = 0
+    cnt.value = arvo
     return redirect("/")
